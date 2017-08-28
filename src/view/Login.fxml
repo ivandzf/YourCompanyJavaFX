@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="effectFade" prefHeight="354.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="loginForm" layoutX="18.0" layoutY="19.0" prefHeight="353.0" prefWidth="473.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="Header" prefHeight="76.0" prefWidth="473.0" style="-fx-background-color: #4183D7;">
+               <children>
+                  <Label fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="453.0" layoutY="-1.0" onMouseClicked="#handleExitClicked" onMouseEntered="#setHover" onMouseExited="#setDefault" prefWidth="21.0" text="X" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="72.0" layoutY="7.0" text="Your" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="128.0" layoutY="7.0" text="Company" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="74.0" layoutY="42.0" text="Pencatatan uang masuk dan keluar" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="63.0" fitWidth="67.0" layoutX="3.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Source_Code_104px_1.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="username" labelFloat="true" layoutX="119.0" layoutY="160.0" prefHeight="25.0" prefWidth="262.0" promptText="Username">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="password" labelFloat="true" layoutX="119.0" layoutY="215.0" prefHeight="25.0" prefWidth="262.0" promptText="Password">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="login" layoutX="119.0" layoutY="274.0" onAction="#Login" onMouseClicked="#Login" prefHeight="34.0" prefWidth="87.0" style="-fx-background-color: #4183D7;" text="Login" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="80.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Male_User_64px_2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="31.0" layoutX="80.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Password_64px_2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="168.0" layoutY="90.0" text="Login Form">
+               <font>
+                  <Font name="Segoe UI Semibold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="db" focusTraversable="false" layoutX="271.0" layoutY="274.0" onAction="#handleSettingClicked" onMouseClicked="#Login" prefHeight="34.0" prefWidth="87.0" text="Setting" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow height="40.0" radius="19.5" spread="0.15" width="40.0" />
+         </effect>
+      </AnchorPane>
+      <Separator layoutX="75.0" layoutY="38.0" prefHeight="1.0" prefWidth="139.0" />
+   </children>
+</AnchorPane>

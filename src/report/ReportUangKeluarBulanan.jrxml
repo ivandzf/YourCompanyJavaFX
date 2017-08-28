@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c599f23-61ec-4408-8e8a-04ba3e5fc2aa">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="50c66c57-08fd-4092-b665-14282feec90c">
+		<parameter name="bulan_query2" class="java.lang.String"/>
+		<queryString>
+			<![CDATA[select FORMAT(@no:=@no+1, '##'),DATE_FORMAT(tanggal,'%d %M %Y') as tgl ,FORMAT(sum(uang_keluar),'##,##0') from uang_keluar, (select @no:=0) t2 where DATE_FORMAT(tanggal,'%M/%Y')=$P{bulan_query2} group by tgl order by tgl asc]]>
+		</queryString>
+		<field name="FORMAT(@no:=@no+1, &apos;##&apos;)" class="java.lang.String"/>
+		<field name="tgl" class="java.lang.String"/>
+		<field name="FORMAT(sum(uang_keluar),&apos;##,##0&apos;)" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="bulan_text" class="java.lang.String"/>
+	<parameter name="bulan_query" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<field name="1" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="26" uuid="d694140c-ccb1-4fdf-b5f6-33a98b4eb3ac"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Your Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="26" width="555" height="20" uuid="9b974814-f7bf-4b5c-bdef-62bfc50e0f72"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Pencatatan uang masuk dan keluar]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="49" width="555" height="1" uuid="f289f510-896c-4f83-9734-8204c615f806"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="23" isPrintInFirstWholeBand="true" uuid="04fd18e3-d384-4215-8e58-2717e832f2cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Laporan Uang Keluar Bulanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="26" width="10" height="20" uuid="749d6437-2496-494e-8c7f-c9fa5395979d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="26" width="39" height="20" uuid="3adf14f1-4cb5-4bbc-9c03-fff5cb2e76cf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bulan]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="49" y="26" width="100" height="20" uuid="33a07382-5743-4bf9-ab3b-45c753d6c38d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bulan_text}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 6" style="table 6" x="0" y="1" width="555" height="50" uuid="38a051a8-43f0-4cd5-b09d-7cb0f0e45de4"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset 1" uuid="2219a6ae-9fd0-4c5b-aa12-b9a0f9066b53">
+						<datasetParameter name="bulan_query2">
+							<datasetParameterExpression><![CDATA[$P{bulan_query}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="42" uuid="d31ce1c6-ab31-42e0-85b8-c17b8407b97b">
+						<jr:columnHeader style="table 6_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="42" height="30" uuid="781e4ea0-3856-44ac-ab6a-d851dc8f5833"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Segoe UI" isBold="true"/>
+								</textElement>
+								<text><![CDATA[No]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="42" height="20" uuid="7a966556-0e8a-4ac6-8235-6edbb0d87eef"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Segoe UI"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{FORMAT(@no:=@no+1, '##')}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="148" uuid="9d553756-8567-4a11-8498-e5fb142878df">
+						<jr:columnHeader style="table 6_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="148" height="30" uuid="325ca8df-cf66-4824-a26e-2f6efe16f7e9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Segoe UI" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Tanggal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="148" height="20" uuid="25c5c65a-474d-435c-94fd-a720e686bde7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Segoe UI"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{tgl}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="364" uuid="efba1c30-e51c-48cb-bd9d-8188a91380d8">
+						<jr:columnHeader style="table 6_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="364" height="30" uuid="257e423b-823f-496e-abc6-a3e1923f1140"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Segoe UI" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Uang Keluar]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 6_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="364" height="20" uuid="6ad753b1-ed4c-4cb0-80a1-480b27b99f1d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Segoe UI"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{FORMAT(sum(uang_keluar),'##,##0')}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<summary>
+		<band height="62">
+			<staticText>
+				<reportElement x="0" y="0" width="94" height="20" uuid="7826c2b4-50f9-476f-bced-c37711f1231d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Uang Keluar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="94" y="0" width="10" height="20" uuid="37eab31e-4310-4905-b722-6eb84f92bff6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="104" y="0" width="100" height="20" uuid="d5ff1140-f3a2-41a2-8075-c104a6a2b4c1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

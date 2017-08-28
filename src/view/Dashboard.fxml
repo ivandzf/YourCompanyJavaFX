@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="455.0" prefWidth="774.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="48.0" prefWidth="774.0" text="Welcome" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Segoe UI Semibold" size="24.0" />
+         </font>
+      </Label>
+      <LineChart fx:id="LineChartMasuk" layoutY="97.0" legendSide="RIGHT" prefHeight="165.0" prefWidth="774.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <JFXTextField fx:id="tahun" focusTraversable="false" labelFloat="true" layoutX="15.0" layoutY="60.0" prefHeight="25.0" prefWidth="90.0" promptText="Tahun">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="118.0" layoutY="57.0" onAction="#refreshClicked" prefHeight="32.0" prefWidth="56.0" style="-fx-background-color: #4183d7;" text="Refresh" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </JFXButton>
+      <LineChart fx:id="LineChartKeluar" layoutY="277.0" legendSide="RIGHT" prefHeight="165.0" prefWidth="774.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
