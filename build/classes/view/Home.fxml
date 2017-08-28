@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="622.0" prefWidth="961.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <StackPane fx:id="trans" opacity="0.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Group>
+               <children>
+                  <AnchorPane fx:id="loadPane" prefHeight="431.0" prefWidth="384.0" />
+                  <JFXButton focusTraversable="false" layoutX="353.0" onAction="#tombolClose" prefHeight="30.0" prefWidth="13.0" text="X">
+                     <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+      <AnchorPane id="AnchorPane" layoutX="19.0" layoutY="19.0" prefHeight="622.0" prefWidth="873.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="blur" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="161.0" prefWidth="961.0" style="-fx-background-color: #4183D7;" AnchorPane.bottomAnchor="457.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_Source_Code_104px_1.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="78.0" layoutY="2.0" text="Your" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Black" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="162.0" layoutY="2.0" text="Company" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="36.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="78.0" layoutY="52.0" text="Pencatatan uang masuk dan keluar" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Semilight" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="namaUser" layoutX="63.0" layoutY="118.0" text="Nama User" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emailUser" layoutX="63.0" layoutY="138.0" text="Email User" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imageUser" fitHeight="40.0" fitWidth="40.0" layoutX="9.0" layoutY="115.0" onMouseClicked="#userClicked" onMouseEntered="#imageHover" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8_Male_User_104px.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="78.0" layoutY="45.0" prefHeight="4.0" prefWidth="210.0" />
+                        <Label fx:id="tanggal" alignment="CENTER_RIGHT" layoutX="760.0" layoutY="46.0" prefHeight="29.0" prefWidth="195.0" text="Tanggal" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="jam" alignment="CENTER_RIGHT" layoutX="760.0" layoutY="76.0" prefHeight="29.0" prefWidth="195.0" text="Jam" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="usernameUser" layoutX="85.0" layoutY="98.0" text="Username User" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idUser" layoutX="85.0" layoutY="79.0" text="ID User" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Segoe UI" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="levelUser" layoutX="311.0" layoutY="32.0" text="level" visible="false" />
+                        <JFXButton alignment="CENTER" contentDisplay="RIGHT" focusTraversable="false" layoutX="858.0" layoutY="127.0" onAction="#logout" prefHeight="17.0" prefWidth="100.0" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold" size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icons8_Exit_96px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="exit" alignment="CENTER" contentDisplay="CENTER" layoutX="931.0" onMouseClicked="#handleExitClicked" onMouseEntered="#setHover" onMouseExited="#setDefault" prefHeight="30.0" prefWidth="30.0" text="X" textFill="WHITE" AnchorPane.leftAnchor="931.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Segoe UI Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="minimize" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#handleMinimizeClicked" onMouseEntered="#setHover2" onMouseExited="#setDefault2" prefHeight="17.0" prefWidth="30.0" text="-" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="20.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="457.0" prefWidth="195.0" style="-fx-background-color: #ECF0F1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="780.0">
+                     <children>
+                        <StackPane prefHeight="150.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox fx:id="operator" prefHeight="461.0" prefWidth="210.0" visible="false">
+                                 <children>
+                                    <JFXButton fx:id="btn_home" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#homeClicked" onMouseClicked="#setBackgroundHome" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #D2D7D3;" text="Home" textFill="#4183d7">
+                                       <graphic>
+                                          <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8_Home_96px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets right="1.0" top="1.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <TitledPane animated="false" collapsible="false" focusTraversable="false" mnemonicParsing="true" prefHeight="110.0" prefWidth="181.0" text="Master">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="179.0" style="-fx-background-color: #ECF0F1;">
+                                             <children>
+                                                <JFXButton fx:id="btn_uang_masuk" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#uangMasukClicked" onMouseClicked="#setBackgroundUangMasuk" prefHeight="41.0" prefWidth="181.0" text="Uang Masuk" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Cash_in_Hand_96px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btn_uang_keluar" alignment="BASELINE_LEFT" focusTraversable="false" layoutX="-1.0" layoutY="42.0" onAction="#uangKeluarClicked" onMouseClicked="#setBackgroundUangKeluar" prefHeight="41.0" prefWidth="181.0" text="Uang Keluar" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Donate_96px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="12.0" />
+                                       </font>
+                                    </TitledPane>
+                                    <TitledPane animated="false" collapsible="false" focusTraversable="false" mnemonicParsing="true" prefHeight="111.0" prefWidth="181.0" style="-fx-background-color: #ECF0F1;" text="Laporan Uang Masuk" textAlignment="CENTER">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ECF0F1;">
+                                             <children>
+                                                <JFXButton fx:id="btn_laporan_uang_masuk_hr" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#laporanUangMasukHarianClicked" onMouseClicked="#setBackgroundUangMasukHarian" prefHeight="41.0" prefWidth="181.0" text="Harian" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Day_Off_64px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btn_laporan_uang_masuk_bln" alignment="BASELINE_LEFT" focusTraversable="false" layoutY="42.0" onAction="#laporanUangMasukBulananClicked" onMouseClicked="#setBackgroundUangMasukBulanan" prefHeight="41.0" prefWidth="181.0" text="Bulanan" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Calendar_32px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="12.0" />
+                                       </font>
+                                    </TitledPane>
+                                    <TitledPane animated="false" collapsible="false" focusTraversable="false" mnemonicParsing="true" prefHeight="193.0" prefWidth="181.0" style="-fx-background-color: #ECF0F1;" text="Laporan Uang Keluar" textAlignment="CENTER">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ECF0F1;">
+                                             <children>
+                                                <JFXButton fx:id="btn_laporan_uang_keluar_hr" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#laporanUangKeluarHarianClicked" onMouseClicked="#setBackgroundUangKeluarHarian" prefHeight="41.0" prefWidth="181.0" text="Harian" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Day_Off_64px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btn_laporan_uang_keluar_bln" alignment="BASELINE_LEFT" focusTraversable="false" layoutY="42.0" onAction="#laporanUangKeluarBulananClicked" onMouseClicked="#setBackgroundUangKeluarBulanan" prefHeight="41.0" prefWidth="181.0" text="Bulanan" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Calendar_32px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="12.0" />
+                                       </font>
+                                    </TitledPane>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="admin" prefHeight="200.0" prefWidth="100.0" visible="false">
+                                 <children>
+                                    <JFXButton fx:id="btn_home1" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#homeClicked" onMouseClicked="#setBackgroundHome1" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #D2D7D3;" text="Home" textFill="#4183d7">
+                                       <graphic>
+                                          <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8_Home_96px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btn_user_management" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#userManagementClicked" onMouseClicked="#setBackgroundUserManagement" prefHeight="41.0" prefWidth="195.0" text="User Management" textFill="#4183d7" VBox.vgrow="ALWAYS">
+                                       <graphic>
+                                          <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8_User_Groups_96px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets right="1.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="user" prefHeight="200.0" prefWidth="100.0" visible="false">
+                                 <children>
+                                    <JFXButton fx:id="btn_home11" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#homeClicked" onMouseClicked="#setBackgroundHomeUser" prefHeight="41.0" prefWidth="195.0" style="-fx-background-color: #D2D7D3;" text="Home" textFill="#4183d7">
+                                       <graphic>
+                                          <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8_Home_96px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="1.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <TitledPane animated="false" collapsible="false" focusTraversable="false" mnemonicParsing="true" prefHeight="111.0" prefWidth="181.0" style="-fx-background-color: #ECF0F1;" text="Laporan Uang Masuk" textAlignment="CENTER">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ECF0F1;">
+                                             <children>
+                                                <JFXButton fx:id="btn_laporan_uang_masuk_hr1" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#laporanUangMasukHarianClicked" onMouseClicked="#setBackgroundUangMasukHarianUser" prefHeight="41.0" prefWidth="181.0" text="Harian" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Day_Off_64px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btn_laporan_uang_masuk_bln1" alignment="BASELINE_LEFT" focusTraversable="false" layoutY="42.0" onAction="#laporanUangMasukBulananClicked" onMouseClicked="#setBackgroundUangMasukBulananUser" prefHeight="41.0" prefWidth="181.0" text="Bulanan" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Calendar_32px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="12.0" />
+                                       </font>
+                                    </TitledPane>
+                                    <TitledPane animated="false" collapsible="false" focusTraversable="false" mnemonicParsing="true" prefHeight="304.0" prefWidth="181.0" style="-fx-background-color: #ECF0F1;" text="Laporan Uang Keluar" textAlignment="CENTER">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="238.0" prefWidth="179.0" style="-fx-background-color: #ECF0F1;">
+                                             <children>
+                                                <JFXButton fx:id="btn_laporan_uang_keluar_hr1" alignment="BASELINE_LEFT" focusTraversable="false" onAction="#laporanUangKeluarHarianClicked" onMouseClicked="#setBackgroundUangKeluarHarianUser" prefHeight="41.0" prefWidth="181.0" text="Harian" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Day_Off_64px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btn_laporan_uang_keluar_bln1" alignment="BASELINE_LEFT" focusTraversable="false" layoutY="42.0" onAction="#laporanUangKeluarBulananClicked" onMouseClicked="#setBackgroundUangKeluarBulananUser" prefHeight="41.0" prefWidth="181.0" text="Bulanan" textFill="#4183d7">
+                                                   <graphic>
+                                                      <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../img/icons8_Calendar_32px.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="Segoe UI Bold" size="14.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="12.0" />
+                                       </font>
+                                    </TitledPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane fx:id="rootPane" minHeight="0.0" minWidth="0.0" opacity="0.0" prefHeight="457.0" prefWidth="781.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="165.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

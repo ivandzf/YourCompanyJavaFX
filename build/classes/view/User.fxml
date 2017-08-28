@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="383.0" style="-fx-background-color: #ececec;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+   <children>
+      <ImageView fitHeight="93.0" fitWidth="93.0" layoutX="145.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8_Male_User_100px_2.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="usernameField" editable="false" labelFloat="true" layoutX="46.0" layoutY="152.0" prefHeight="25.0" prefWidth="291.0" promptText="Username">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="passwordField" labelFloat="true" layoutX="46.0" layoutY="212.0" prefHeight="25.0" prefWidth="291.0" promptText="Password">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="namaField" labelFloat="true" layoutX="46.0" layoutY="272.0" prefHeight="25.0" prefWidth="291.0" promptText="Nama">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="emailField" labelFloat="true" layoutX="46.0" layoutY="333.0" prefHeight="25.0" prefWidth="291.0" promptText="Email">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="46.0" layoutY="391.0" onAction="#simpanClicked" prefHeight="35.0" prefWidth="291.0" style="-fx-background-color: #4183D7;" text="Simpan" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="135.0" layoutY="110.0" text="User Profil" textFill="#4183d7">
+         <font>
+            <Font name="Segoe UI Semibold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLabel" layoutX="249.0" layoutY="119.0" prefHeight="17.0" prefWidth="24.0" text="ID" visible="false" />
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

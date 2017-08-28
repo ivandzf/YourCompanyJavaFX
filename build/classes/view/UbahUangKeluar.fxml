@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="254.0" prefWidth="321.0" style="-fx-background-color: #ececec;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UbahUangKeluarController">
+   <children>
+      <Group layoutX="45.0" layoutY="88.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="-29.0" layoutY="-65.0" text="Detail Uang Keluar">
+               <font>
+                  <Font name="Segoe UI Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="detail_uang_keluar" editable="false" labelFloat="true" layoutX="-15.0" layoutY="-9.0" prefHeight="26.0" prefWidth="273.0" promptText="Detail Uang Keluar" style="-jfx-disable-animation: false;">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="uang_keluar" labelFloat="true" layoutX="-15.0" layoutY="46.0" prefHeight="25.0" prefWidth="273.0" promptText="Uang Keluar" style="-jfx-disable-animation: false;">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="date_uang_keluar_text" editable="false" labelFloat="true" layoutX="-15.0" layoutY="103.0" prefHeight="26.0" prefWidth="241.0" promptText="Tanggal" style="-jfx-disable-animation: false;">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="date_uang_keluar" defaultColor="#4183d7" editable="false" focusTraversable="false" layoutX="221.0" layoutY="103.0" onAction="#dateClicked" prefHeight="25.0" prefWidth="0.0" />
+            <HBox alignment="CENTER_LEFT" layoutX="-20.0" layoutY="160.0" prefHeight="41.0" prefWidth="292.0">
+               <children>
+                  <JFXButton onAction="#simpanClicked" prefHeight="33.0" prefWidth="95.0" style="-fx-background-color: #4183d7;" text="Simpan" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label fx:id="idUangKeluar" layoutX="138.0" layoutY="-62.0" text="Label" visible="false" />
+         </children>
+      </Group>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

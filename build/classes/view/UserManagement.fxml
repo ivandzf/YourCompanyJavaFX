@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="utama" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="774.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserManagementController">
+   <children>
+      <StackPane fx:id="trans" opacity="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Group fx:id="groups">
+               <children>
+                  <AnchorPane fx:id="loadPane" prefHeight="366.0" prefWidth="322.0" />
+                  <JFXButton focusTraversable="false" layoutX="291.0" onAction="#tombolClose" prefHeight="25.0" prefWidth="24.0" text="X">
+                     <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="dataUser" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="blur" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="764.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="btn_tambah" focusTraversable="false" onAction="#tambahClicked" style="-fx-background-color: #4183d7;" text="Tambah" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_ubah" focusTraversable="false" onAction="#ubahClicked" style="-fx-background-color: #4183d7;" text="Ubah" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton focusTraversable="false" onAction="#hapusClicked" style="-fx-background-color: #4183d7;" text="Hapus" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI" size="13.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableUser" fixedCellSize="0.0" focusTraversable="false" onMouseClicked="#ambilId" prefHeight="375.0" prefWidth="764.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                     <contextMenu>
+                        <ContextMenu fx:id="contextMenu">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#ubahClicked" text="Ubah" />
+                              <MenuItem mnemonicParsing="false" onAction="#hapusClicked" text="Hapus" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                     <columns>
+                        <TableColumn fx:id="columnID" editable="false" prefWidth="48.0" sortable="false" text="ID" visible="false" />
+                        <TableColumn fx:id="columnNo" editable="false" prefWidth="47.0" sortable="false" text="No" />
+                        <TableColumn fx:id="columnUsername" editable="false" prefWidth="136.0" sortable="false" text="Username" />
+                        <TableColumn fx:id="columnPassword" editable="false" prefWidth="156.0" sortable="false" text="Password" />
+                        <TableColumn fx:id="columnNama" editable="false" prefWidth="168.0" sortable="false" text="Nama" />
+                        <TableColumn fx:id="columnEmail" editable="false" prefWidth="162.0" sortable="false" text="Email" />
+                        <TableColumn fx:id="columnLevel" editable="false" prefWidth="94.0" sortable="false" text="Level" />
+                        <TableColumn fx:id="columnStatus" editable="false" prefWidth="114.0" sortable="false" text="Status" />
+                     </columns>
+                  </TableView>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="765.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton focusTraversable="false" prefHeight="28.0" prefWidth="72.0" style="-fx-background-color: #DADFE1;" text="Refresh">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

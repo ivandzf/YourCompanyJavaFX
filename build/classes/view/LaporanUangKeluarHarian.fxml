@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="utama" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="774.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LaporanUangKeluarHarianController">
+   <children>
+      <AnchorPane fx:id="dataUangMasuk" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="blur" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="764.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <GridPane prefHeight="40.0" prefWidth="773.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="582.0" minWidth="0.0" prefWidth="577.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="649.0" minWidth="10.0" prefWidth="187.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="116.0" text="Total">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="total_uang_keluar" alignment="CENTER" prefHeight="17.0" prefWidth="178.0" text="total" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Segoe UI Semibold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableUangKeluar" fixedCellSize="0.0" focusTraversable="false" layoutY="60.0" prefHeight="355.0" prefWidth="764.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
+                     <columns>
+                        <TableColumn fx:id="columnNo" editable="false" prefWidth="52.0" resizable="false" sortable="false" text="No" />
+                        <TableColumn fx:id="columnDetail" editable="false" prefWidth="276.0" resizable="false" sortable="false" text="Detail Uang Keluar" />
+                        <TableColumn fx:id="columnTanggal" editable="false" prefWidth="246.0" resizable="false" sortable="false" text="Tanggal Uang Keluar" />
+                        <TableColumn fx:id="columnUang" editable="false" prefWidth="188.0" resizable="false" sortable="false" text="Uang Keluar" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="2.0" prefHeight="46.0" prefWidth="764.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
+         <children>
+            <JFXTextField fx:id="hari" editable="false" focusTraversable="false" labelFloat="true" layoutX="14.0" layoutY="12.0" prefHeight="25.0" prefWidth="139.0" promptText="Tanggal" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="12.0" />
+            <JFXDatePicker fx:id="hari_pilih" defaultColor="#4183d7" focusTraversable="false" layoutX="153.0" layoutY="12.0" onAction="#dateClicked" prefHeight="25.0" prefWidth="21.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="153.0" AnchorPane.topAnchor="12.0" />
+            <JFXButton focusTraversable="false" layoutX="200.0" layoutY="9.0" onAction="#refreshClicked" prefHeight="28.0" prefWidth="72.0" style="-fx-background-color: #DADFE1;" text="Refresh" AnchorPane.bottomAnchor="9.0" AnchorPane.topAnchor="9.0">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutY="4.0" orientation="VERTICAL" prefHeight="40.0" prefWidth="0.0" />
+            <JFXButton fx:id="btnOutput" contentDisplay="RIGHT" focusTraversable="false" layoutX="641.0" layoutY="9.0" onMouseClicked="#openContext" prefHeight="28.0" prefWidth="116.0" style="-fx-background-color: #DADFE1;" text="Save or Print" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="9.0">
+               <contextMenu>
+                  <ContextMenu fx:id="contextOutput">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#saveXLSX" text="Save to Excel" />
+                        <MenuItem mnemonicParsing="false" onAction="#printClicked" text="Print" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icons8_Chevron_Down_52px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
